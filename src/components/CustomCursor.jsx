@@ -1,25 +1,35 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function CustomCursor() {
   const outerRef = useRef(null)
   const innerRef = useRef(null)
   const mouse = useRef({ x: 0, y: 0 })
   const outerPos = useRef({ x: 0, y: 0 })
+  const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
-    // Hide default cursor
+    // Only enable on devices with fine pointer (mouse)
+    const mq = window.matchMedia('(pointer: fine)')
+    setIsDesktop(mq.matches)
+
+    const handler = (e) => setIsDesktop(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
+  useEffect(() => {
+    if (!isDesktop) return
+
     document.body.style.cursor = 'none'
 
     const handleMouseMove = (e) => {
       mouse.current = { x: e.clientX, y: e.clientY }
 
-      // Inner dot follows immediately
       if (innerRef.current) {
         innerRef.current.style.transform = `translate(${e.clientX - 3}px, ${e.clientY - 3}px)`
       }
     }
 
-    // Outer ring follows with lag via rAF
     let raf
     const animate = () => {
       outerPos.current.x += (mouse.current.x - outerPos.current.x) * 0.12
@@ -40,18 +50,12 @@ export default function CustomCursor() {
       window.removeEventListener('mousemove', handleMouseMove)
       cancelAnimationFrame(raf)
     }
-  }, [])
+  }, [isDesktop])
 
-  // Only show on non-touch devices
-  const isTouchDevice =
-    typeof window !== 'undefined' &&
-    ('ontouchstart' in window || navigator.maxTouchPoints > 0)
-
-  if (isTouchDevice) return null
+  if (!isDesktop) return null
 
   return (
     <>
-      {/* Outer ring */}
       <div
         ref={outerRef}
         className="fixed top-0 left-0 z-[999] pointer-events-none"
@@ -64,7 +68,6 @@ export default function CustomCursor() {
           willChange: 'transform',
         }}
       />
-      {/* Inner dot */}
       <div
         ref={innerRef}
         className="fixed top-0 left-0 z-[999] pointer-events-none"

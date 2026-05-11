@@ -3,22 +3,22 @@ import TypewriterText from '../components/TypewriterText'
 
 export default function Hero() {
   return (
-    <section className="grid-bg relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+    <section className="grid-bg relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden">
       {/* Top right corner text */}
-      <span className="absolute top-6 right-6 font-mono text-[10px] text-text-muted uppercase tracking-widest">
+      <span className="absolute top-6 right-6 font-mono text-[10px] text-text-muted uppercase tracking-widest hidden sm:block">
         EST. 2024 // ERIE PA
       </span>
 
       {/* Badge */}
-      <div className="flex items-center gap-2 mb-8">
-        <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-        <span className="font-mono text-[11px] text-text-secondary uppercase tracking-widest">
+      <div className="flex items-center gap-2 mb-6 sm:mb-8">
+        <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse shrink-0" />
+        <span className="font-mono text-[10px] sm:text-[11px] text-text-secondary uppercase tracking-widest text-center">
           Solo Founded // AI-Powered // Bootstrapped
         </span>
       </div>
 
       {/* Headline */}
-      <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center leading-[1.1] max-w-4xl">
+      <h1 className="font-headline text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-center leading-[1.1] max-w-4xl">
         <span className="block">
           <AnimatedWord delay={0}>We</AnimatedWord>{' '}
           <AnimatedWord delay={0.08}>build</AnimatedWord>{' '}
@@ -48,16 +48,16 @@ export default function Hero() {
       </h1>
 
       {/* Subheadline */}
-      <p className="font-body text-base md:text-lg text-text-secondary font-light text-center max-w-2xl mt-8 leading-relaxed">
+      <p className="font-body text-sm sm:text-base md:text-lg text-text-secondary font-light text-center max-w-2xl mt-6 sm:mt-8 leading-relaxed px-2">
         Erie Apps LLC is a one-person software studio based in Erie, Pennsylvania.
         AI-powered tools for the niches enterprise software ignores.
       </p>
 
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
+      <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 sm:mt-10 w-full sm:w-auto px-4 sm:px-0">
         <a
           href="#products"
-          className="group relative font-mono text-xs uppercase tracking-widest px-8 py-4 bg-accent-green text-bg rounded-lg transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px]"
+          className="w-full sm:w-auto text-center font-mono text-xs uppercase tracking-widest px-8 py-4 bg-accent-green text-bg rounded-lg transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px]"
           style={{ boxShadow: 'none' }}
           onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '4px 4px 0 #00ff87' }}
           onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none' }}
@@ -66,14 +66,14 @@ export default function Hero() {
         </a>
         <a
           href="#about"
-          className="font-mono text-xs uppercase tracking-widest px-8 py-4 rounded-lg border border-border text-text-secondary transition-all duration-200 hover:border-border-hover hover:text-accent-green"
+          className="w-full sm:w-auto text-center font-mono text-xs uppercase tracking-widest px-8 py-4 rounded-lg border border-border text-text-secondary transition-all duration-200 hover:border-border-hover hover:text-accent-green"
         >
           Our Story
         </a>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 flex flex-col items-center gap-3">
+      <div className="absolute bottom-8 sm:bottom-10 flex flex-col items-center gap-3">
         <div className="w-[1px] h-8 bg-text-muted" />
         <span className="font-mono text-[10px] text-text-muted uppercase tracking-[0.3em]">
           Scroll

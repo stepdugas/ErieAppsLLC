@@ -8,7 +8,7 @@ export default function Products() {
   const inProgressCount = products.length - liveCount
 
   return (
-    <section id="products" className="relative z-10 py-24 md:py-32 px-6">
+    <section id="products" className="relative z-10 py-20 md:py-32 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-16">
@@ -19,7 +19,7 @@ export default function Products() {
               </span>
             </SectionReveal>
             <SectionReveal delay={0.1}>
-              <h2 className="font-headline text-3xl md:text-5xl mt-4">
+              <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl mt-4">
                 Six products.{' '}
                 <span style={{ WebkitTextStroke: '1px rgba(255,255,255,0.25)', color: 'transparent' }}>
                   <GlitchText text="All shipping." />
