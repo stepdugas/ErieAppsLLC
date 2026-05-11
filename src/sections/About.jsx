@@ -27,7 +27,7 @@ const infoRows = [
 
 export default function About() {
   return (
-    <section id="about" className="relative z-10 py-20 md:py-32 px-4 sm:px-6">
+    <section id="about" className="relative z-10 py-20 md:py-32 px-8 sm:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Label + Headline */}
         <SectionReveal>

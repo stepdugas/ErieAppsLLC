@@ -2,7 +2,7 @@ import SectionReveal from '../components/SectionReveal'
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative z-10 py-20 md:py-32 px-4 sm:px-6">
+    <section id="contact" className="relative z-10 py-20 md:py-32 px-8 sm:px-12 lg:px-20">
       <div className="max-w-4xl mx-auto text-center">
         <SectionReveal>
           <span className="font-mono text-xs text-accent-green uppercase tracking-widest">

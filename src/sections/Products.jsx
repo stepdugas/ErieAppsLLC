@@ -8,7 +8,7 @@ export default function Products() {
   const inProgressCount = products.length - liveCount
 
   return (
-    <section id="products" className="relative z-10 py-20 md:py-32 px-4 sm:px-6">
+    <section id="products" className="relative z-10 py-20 md:py-32 px-8 sm:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-16">

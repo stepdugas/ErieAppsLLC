@@ -14,7 +14,7 @@ export default function Stats() {
       className="relative z-10 py-20 md:py-32 border-t border-b border-border"
       style={{ background: 'rgba(0, 255, 135, 0.015)' }}
     >
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-8">
+      <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-8">
         {stats.map((stat, i) => (
           <SectionReveal key={stat.label} delay={i * 0.1} className="text-center">
             <p className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-accent-green">
