@@ -32,7 +32,7 @@ export default function Navbar() {
             : '1px solid transparent',
       }}
     >
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 h-16 flex items-center justify-between">
+      <div className="px-8 sm:px-12 lg:px-20 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-0 font-headline text-xl select-none">
           <span className="text-accent-green">erie</span>
           <span className="text-accent-green">apps</span>
