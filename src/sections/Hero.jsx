@@ -57,7 +57,7 @@ export default function Hero() {
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 sm:mt-10 w-full sm:w-auto">
         <a
           href="#products"
-          className="w-full sm:w-auto text-center font-mono text-xs uppercase tracking-widest px-8 py-4 bg-accent-green text-bg rounded-lg transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px]"
+          className="w-full sm:w-auto text-center font-mono text-xs uppercase tracking-widest px-10 py-5 bg-accent-green text-bg rounded-xl transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px]"
           style={{ boxShadow: 'none' }}
           onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '4px 4px 0 #00ff87' }}
           onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none' }}
