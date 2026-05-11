@@ -32,7 +32,7 @@ export default function Navbar() {
             : '1px solid transparent',
       }}
     >
-      <div className="px-10 sm:px-14 lg:px-24 h-16 flex items-center justify-between">
+      <div className="px-6 sm:px-10 lg:px-16 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-0 font-headline text-xl select-none">
           <span className="text-accent-green">erie</span>
           <span className="text-accent-green">apps</span>
@@ -81,7 +81,7 @@ export default function Navbar() {
 
       {/* Mobile menu dropdown */}
       {menuOpen && (
-        <div className="md:hidden border-t border-border px-8 py-6 flex flex-col gap-5">
+        <div className="md:hidden border-t border-border px-6 sm:px-10 py-6 flex flex-col gap-5">
           {['Products', 'About', 'Contact'].map((link) => (
             <a
               key={link}

@@ -8,8 +8,8 @@ export default function Products() {
   const inProgressCount = products.length - liveCount
 
   return (
-    <section id="products" className="relative z-10 py-20 md:py-32 px-8 sm:px-12 lg:px-20">
-      <div className="max-w-6xl mx-auto">
+    <section id="products" className="relative z-10 py-20 md:py-32 px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto" style={{ maxWidth: '1200px' }}>
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-16">
           <div>
@@ -54,7 +54,7 @@ export default function Products() {
         </div>
 
         {/* Product grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, i) => (
             <SectionReveal key={product.name} delay={i * 0.08}>
               <ProductCard product={product} />

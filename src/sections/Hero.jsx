@@ -3,9 +3,9 @@ import TypewriterText from '../components/TypewriterText'
 
 export default function Hero() {
   return (
-    <section className="grid-bg relative min-h-screen flex flex-col items-center justify-center px-8 sm:px-12 lg:px-20 overflow-hidden">
+    <section className="grid-bg relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 lg:px-16 overflow-hidden">
       {/* Top right corner text */}
-      <span className="absolute top-20 right-8 sm:right-12 lg:right-20 font-mono text-[10px] text-text-muted uppercase tracking-widest hidden md:block">
+      <span className="absolute top-20 right-6 sm:right-10 lg:right-16 font-mono text-[10px] text-text-muted uppercase tracking-widest hidden md:block">
         EST. 2024 // ERIE PA
       </span>
 

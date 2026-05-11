@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 border-t border-border px-8 sm:px-12 lg:px-20 py-6 sm:py-8">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer className="relative z-10 border-t border-border px-6 sm:px-10 lg:px-16 py-6 sm:py-8">
+      <div className="mx-auto flex flex-col sm:flex-row items-center justify-between gap-4" style={{ maxWidth: '1200px' }}>
         <div className="flex items-center gap-3">
           <span className="font-headline text-sm text-accent-green select-none">
             erieapps
