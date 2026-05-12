@@ -38,13 +38,15 @@ export default function CountUp({
     const animate = (now) => {
       const elapsed = now - startTime
       const progress = Math.min(elapsed / durationMs, 1)
-      // Ease out cubic
       const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.floor(eased * end))
 
-      if (progress < 1) {
-        requestAnimationFrame(animate)
+      if (progress >= 1) {
+        setCount(end)
+        return
       }
+
+      setCount(Math.round(eased * end))
+      requestAnimationFrame(animate)
     }
 
     requestAnimationFrame(animate)

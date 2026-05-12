@@ -39,7 +39,7 @@ export default function About() {
         <SectionReveal delay={0.1}>
           <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl mt-4 mb-10 md:mb-16">
             One person.{' '}
-            <span style={{ WebkitTextStroke: '1px rgba(255,255,255,0.25)', color: 'transparent' }}>
+            <span className="text-ghost">
               Focused output.
             </span>
           </h2>

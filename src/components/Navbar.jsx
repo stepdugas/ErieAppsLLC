@@ -44,7 +44,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-0 font-headline text-xl select-none">
           <span className="text-accent-green">erie</span>
           <span className="text-accent-green">apps</span>
-          <span className="ml-1 w-2 h-2 rounded-full bg-accent-green animate-pulse" />
+          <span className="ml-1 w-2 h-2 rounded-full bg-accent-green animate-pulse" aria-hidden="true" />
         </Link>
 
         {/* Desktop links */}
@@ -60,11 +60,13 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — 44x44 touch target */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="md:hidden flex flex-col items-center justify-center gap-1.5"
+          style={{ minWidth: '44px', minHeight: '44px' }}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <span
             className="block w-5 h-[1.5px] bg-accent-green transition-all duration-200"
@@ -74,9 +76,7 @@ export default function Navbar() {
           />
           <span
             className="block w-5 h-[1.5px] bg-accent-green transition-all duration-200"
-            style={{
-              opacity: menuOpen ? 0 : 1,
-            }}
+            style={{ opacity: menuOpen ? 0 : 1 }}
           />
           <span
             className="block w-5 h-[1.5px] bg-accent-green transition-all duration-200"
@@ -99,6 +99,7 @@ export default function Navbar() {
               href={`#${link.toLowerCase()}`}
               onClick={() => setMenuOpen(false)}
               className="font-mono text-sm uppercase tracking-widest text-text-secondary transition-colors duration-200 hover:text-accent-green"
+              style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
             >
               {link}
             </a>

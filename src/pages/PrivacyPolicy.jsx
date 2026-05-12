@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
               <p>
                 Erie Apps LLC ("we," "us," or "our") operates the following products
                 and services: InspectIQ, ReplyIQ, Stacked, The Secret Place,
-                Dealership SaaS, and BuiltDifferent (collectively, the "Services").
+                Dealership SaaS, and HabitLink (collectively, the "Services").
                 This Privacy Policy explains how we collect, use, disclose, and
                 safeguard your information when you use any of our Services.
               </p>
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
               </h4>
               <ul className="list-disc list-inside space-y-1.5 ml-2">
                 <li>Google Business Profile data (via the Google Business Profile API) for ReplyIQ and Dealership SaaS</li>
-                <li>Apple App Store purchase verification data for Stacked, The Secret Place, and BuiltDifferent</li>
+                <li>Apple App Store purchase verification data for Stacked, The Secret Place, and HabitLink</li>
                 <li>Payment confirmation data from Stripe</li>
               </ul>
             </Section>
@@ -136,7 +136,7 @@ export default function PrivacyPolicy() {
               </h4>
               <p>
                 We use Stripe to process payments for InspectIQ, ReplyIQ, Dealership
-                SaaS, and BuiltDifferent. Payment information (credit card numbers,
+                SaaS, and HabitLink. Payment information (credit card numbers,
                 billing addresses) is transmitted directly to Stripe and is never
                 stored on our servers. Please review{' '}
                 <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent-green hover:underline">
@@ -161,7 +161,7 @@ export default function PrivacyPolicy() {
                 4.5 Apple App Store
               </h4>
               <p>
-                Stacked, The Secret Place, and BuiltDifferent are distributed via
+                Stacked, The Secret Place, and HabitLink are distributed via
                 the Apple App Store. In-app purchases and subscriptions are processed
                 by Apple. We receive transaction confirmation data but do not have
                 access to your Apple ID credentials or payment methods.
@@ -206,7 +206,7 @@ export default function PrivacyPolicy() {
                 transmitted to external servers.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">BuiltDifferent</h4>
+              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">HabitLink</h4>
               <p>
                 App usage data and preferences are stored locally on your device and
                 optionally synced to our servers to enable cross-device access.

@@ -6,7 +6,6 @@ import Container from '../components/Container'
 
 export default function Products() {
   const liveCount = products.filter((p) => p.status === 'Live').length
-  const inProgressCount = products.length - liveCount
 
   return (
     <section id="products" className="relative z-10 py-20 md:py-32">
@@ -21,8 +20,8 @@ export default function Products() {
             </SectionReveal>
             <SectionReveal delay={0.1}>
               <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl mt-4">
-                Six products.{' '}
-                <span style={{ WebkitTextStroke: '1px rgba(255,255,255,0.25)', color: 'transparent' }}>
+                {products.length} products.{' '}
+                <span className="text-ghost">
                   <GlitchText text="All shipping." />
                 </span>
               </h2>
@@ -42,12 +41,6 @@ export default function Products() {
                 Live //{' '}
                 <span className="text-text-primary">
                   {String(liveCount).padStart(2, '0')}
-                </span>
-              </p>
-              <p>
-                In Progress //{' '}
-                <span className="text-text-primary">
-                  {String(inProgressCount).padStart(2, '0')}
                 </span>
               </p>
             </div>

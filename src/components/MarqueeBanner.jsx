@@ -1,14 +1,8 @@
-const products = [
-  'InspectIQ',
-  'ReplyIQ',
-  'Dealership SaaS',
-  'Stacked',
-  'The Secret Place',
-  'HabitLink',
-]
+import { products } from '../data/products'
 
 export default function MarqueeBanner() {
-  const items = [...products, ...products]
+  const names = products.map((p) => p.name)
+  const items = [...names, ...names]
 
   return (
     <div
@@ -18,6 +12,7 @@ export default function MarqueeBanner() {
         overflow: 'hidden',
         position: 'relative',
       }}
+      aria-hidden="true"
     >
       <style>{`
 @keyframes marquee-scroll {

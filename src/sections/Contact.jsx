@@ -12,7 +12,7 @@ export default function Contact() {
         </SectionReveal>
         <SectionReveal delay={0.1}>
           <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl mt-4 mb-8 sm:mb-10">
-            Let's build something.
+            Got a question? Reach out.
           </h2>
         </SectionReveal>
         <SectionReveal delay={0.2}>

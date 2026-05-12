@@ -4,9 +4,9 @@ import Container from '../components/Container'
 
 const stats = [
   { end: 6, suffix: '', label: 'Products Built' },
-  { end: 5, suffix: '', label: 'Live & Shipping' },
+  { end: 6, suffix: '', label: 'Live & Shipping' },
   { end: 100, suffix: '%', label: 'Bootstrapped' },
-  { end: 1, suffix: '', label: 'Founder. All of it.' },
+  { end: 1, suffix: '', label: 'Solo Founder' },
 ]
 
 export default function Stats() {
@@ -14,8 +14,9 @@ export default function Stats() {
     <section
       className="relative z-10 py-20 md:py-32 border-t border-b border-border"
       style={{ background: 'rgba(0, 255, 135, 0.015)' }}
+      aria-label="Company statistics"
     >
-      <Container className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <Container className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, i) => (
           <SectionReveal key={stat.label} delay={i * 0.1} className="text-center">
             <p className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-accent-green">

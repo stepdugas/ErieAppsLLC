@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?'
 
 export default function GlitchText({ text, className = '' }) {
   const [display, setDisplay] = useState(text)
-  const [isGlitching, setIsGlitching] = useState(false)
+  const isGlitchingRef = useRef(false)
 
   useEffect(() => {
     const triggerGlitch = () => {
-      setIsGlitching(true)
+      if (isGlitchingRef.current) return
+      isGlitchingRef.current = true
       let iterations = 0
       const maxIterations = 6
 
@@ -28,31 +29,23 @@ export default function GlitchText({ text, className = '' }) {
         if (iterations > maxIterations) {
           clearInterval(interval)
           setDisplay(text)
-          setIsGlitching(false)
+          isGlitchingRef.current = false
         }
       }, 50)
-
-      return () => clearInterval(interval)
     }
 
-    const scheduleNext = () => {
-      const nextDelay = 3000 + Math.random() * 4000
-      return setTimeout(triggerGlitch, nextDelay)
+    const scheduleGlitch = () => {
+      const delay = 3000 + Math.random() * 4000
+      return setTimeout(() => {
+        triggerGlitch()
+        timerId = scheduleGlitch()
+      }, delay)
     }
 
-    let timeout = scheduleNext()
-    const recurring = setInterval(() => {
-      if (!isGlitching) {
-        clearTimeout(timeout)
-        timeout = scheduleNext()
-      }
-    }, 7000)
+    let timerId = scheduleGlitch()
 
-    return () => {
-      clearTimeout(timeout)
-      clearInterval(recurring)
-    }
-  }, [text, isGlitching])
+    return () => clearTimeout(timerId)
+  }, [text])
 
   return <span className={className}>{display}</span>
 }

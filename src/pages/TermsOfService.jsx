@@ -35,7 +35,7 @@ export default function TermsOfService() {
               <p>
                 These Terms govern your access to and use of our products and
                 services, including InspectIQ, ReplyIQ, Stacked, The Secret Place,
-                Dealership SaaS, and BuiltDifferent (collectively, the "Services").
+                Dealership SaaS, and HabitLink (collectively, the "Services").
                 By accessing or using any of our Services, you agree to be bound by
                 these Terms. If you do not agree, do not use our Services.
               </p>
@@ -107,7 +107,7 @@ export default function TermsOfService() {
                 via the Apple App Store.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">BuiltDifferent</h4>
+              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">HabitLink</h4>
               <p>
                 An iOS application available via the Apple App Store. In-app
                 purchases and subscriptions are governed additionally by Apple's
@@ -118,7 +118,7 @@ export default function TermsOfService() {
             {/* 5 */}
             <Section title="5. Payments and Subscriptions">
               <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
-                5.1 Web-Based Services (InspectIQ, ReplyIQ, Dealership SaaS, BuiltDifferent)
+                5.1 Web-Based Services (InspectIQ, ReplyIQ, Dealership SaaS, HabitLink)
               </h4>
               <p>
                 Payments are processed securely through Stripe. By subscribing, you
@@ -128,7 +128,7 @@ export default function TermsOfService() {
               </p>
 
               <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
-                5.2 iOS Apps (Stacked, The Secret Place, BuiltDifferent)
+                5.2 iOS Apps (Stacked, The Secret Place, HabitLink)
               </h4>
               <p>
                 In-app purchases and subscriptions for iOS apps are processed by
@@ -244,7 +244,7 @@ export default function TermsOfService() {
               </p>
               <p>
                 The names InspectIQ, ReplyIQ, Stacked, The Secret Place, Dealership
-                SaaS, BuiltDifferent, and Erie Apps are trademarks of Erie Apps LLC.
+                SaaS, HabitLink, and Erie Apps are trademarks of Erie Apps LLC.
               </p>
             </Section>
 

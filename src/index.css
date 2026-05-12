@@ -11,8 +11,8 @@
   --color-border: rgba(255, 255, 255, 0.06);
   --color-border-hover: rgba(0, 255, 135, 0.3);
   --color-text-primary: #ffffff;
-  --color-text-secondary: rgba(255, 255, 255, 0.42);
-  --color-text-muted: rgba(255, 255, 255, 0.2);
+  --color-text-secondary: rgba(255, 255, 255, 0.6);
+  --color-text-muted: rgba(255, 255, 255, 0.35);
   --color-accent-green: #00ff87;
   --color-accent-blue: #60efff;
   --color-accent-purple: #c77dff;
@@ -47,9 +47,15 @@ body {
   width: 100%;
 }
 
+/* ── Focus Styles ── */
+*:focus-visible {
+  outline: 2px solid var(--color-accent-green);
+  outline-offset: 2px;
+}
+
 /* ── Custom Scrollbar ── */
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -62,7 +68,7 @@ body {
 }
 
 /* Firefox */
-html {
+* {
   scrollbar-width: thin;
   scrollbar-color: var(--color-accent-green) transparent;
 }
@@ -73,4 +79,26 @@ html {
     linear-gradient(rgba(0, 255, 135, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 135, 0.025) 1px, transparent 1px);
   background-size: 64px 64px;
+}
+
+/* ── Ghost/Outlined Text ── */
+.text-ghost {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+  color: transparent;
+  paint-order: stroke fill;
+}
+
+@supports not (-webkit-text-stroke: 1px white) {
+  .text-ghost {
+    color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

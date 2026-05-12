@@ -11,14 +11,16 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <div className="relative z-10">
-        <MarqueeBanner />
-      </div>
-      <Products />
-      <Stats />
-      <About />
-      <Contact />
+      <main>
+        <Hero />
+        <div className="relative z-10">
+          <MarqueeBanner />
+        </div>
+        <Products />
+        <Stats />
+        <About />
+        <Contact />
+      </main>
       <Footer />
     </>
   )

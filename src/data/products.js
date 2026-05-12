@@ -5,7 +5,7 @@ export const products = [
     url: 'useinspectiq.com',
     color: '#00ff87',
     status: 'Live',
-    icon: '🔍',
+    iconKey: 'inspectiq',
     type: 'SaaS',
   },
   {
@@ -14,7 +14,7 @@ export const products = [
     url: 'replyiqapp.com',
     color: '#60efff',
     status: 'Live',
-    icon: '💬',
+    iconKey: 'replyiq',
     type: 'SaaS',
   },
   {
@@ -23,7 +23,7 @@ export const products = [
     url: 'cardealershipswebsitebuilder.com',
     color: '#ff4d6d',
     status: 'Live',
-    icon: '🚗',
+    iconKey: 'dealership',
     type: 'SaaS',
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     url: 'stackedflashcards.com',
     color: '#ff9a3c',
     status: 'Live',
-    icon: '📚',
+    iconKey: 'stacked',
     type: 'iOS',
   },
   {
@@ -41,7 +41,7 @@ export const products = [
     url: 'thesecretplace.app',
     color: '#c77dff',
     status: 'Live',
-    icon: '✝️',
+    iconKey: 'secretplace',
     type: 'iOS',
   },
   {
@@ -50,7 +50,7 @@ export const products = [
     url: 'apps.apple.com',
     color: '#00ff87',
     status: 'Live',
-    icon: '🔗',
+    iconKey: 'habitlink',
     type: 'iOS',
   },
 ]
