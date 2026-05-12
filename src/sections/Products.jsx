@@ -2,14 +2,15 @@ import { products } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import SectionReveal from '../components/SectionReveal'
 import GlitchText from '../components/GlitchText'
+import Container from '../components/Container'
 
 export default function Products() {
   const liveCount = products.filter((p) => p.status === 'Live').length
   const inProgressCount = products.length - liveCount
 
   return (
-    <section id="products" className="relative z-10 py-20 md:py-32 px-6 sm:px-10 lg:px-16">
-      <div className="mx-auto" style={{ maxWidth: '1200px' }}>
+    <section id="products" className="relative z-10 py-20 md:py-32">
+      <Container>
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-16">
           <div>
@@ -61,7 +62,7 @@ export default function Products() {
             </SectionReveal>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

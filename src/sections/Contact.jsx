@@ -1,9 +1,10 @@
 import SectionReveal from '../components/SectionReveal'
+import Container from '../components/Container'
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative z-10 py-20 md:py-32 px-6 sm:px-10 lg:px-16">
-      <div className="mx-auto text-center" style={{ maxWidth: '900px' }}>
+    <section id="contact" className="relative z-10 py-20 md:py-32">
+      <Container className="text-center">
         <SectionReveal>
           <span className="font-mono text-xs text-accent-green uppercase tracking-widest">
             03 // Contact
@@ -25,7 +26,7 @@ export default function Contact() {
             </span>
           </a>
         </SectionReveal>
-      </div>
+      </Container>
     </section>
   )
 }

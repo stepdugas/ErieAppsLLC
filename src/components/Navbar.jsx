@@ -11,7 +11,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu on scroll
   useEffect(() => {
     if (menuOpen) {
       const close = () => setMenuOpen(false)
@@ -32,7 +31,16 @@ export default function Navbar() {
             : '1px solid transparent',
       }}
     >
-      <div className="px-6 sm:px-10 lg:px-16 h-16 flex items-center justify-between">
+      <div
+        className="h-16 flex items-center justify-between"
+        style={{
+          maxWidth: '1200px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: 'clamp(24px, 5vw, 64px)',
+          paddingRight: 'clamp(24px, 5vw, 64px)',
+        }}
+      >
         <Link to="/" className="flex items-center gap-0 font-headline text-xl select-none">
           <span className="text-accent-green">erie</span>
           <span className="text-accent-green">apps</span>
@@ -81,7 +89,10 @@ export default function Navbar() {
 
       {/* Mobile menu dropdown */}
       {menuOpen && (
-        <div className="md:hidden border-t border-border px-6 sm:px-10 py-6 flex flex-col gap-5">
+        <div
+          className="md:hidden border-t border-border flex flex-col gap-5"
+          style={{ padding: 'clamp(24px, 5vw, 64px)' }}
+        >
           {['Products', 'About', 'Contact'].map((link) => (
             <a
               key={link}

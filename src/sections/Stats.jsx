@@ -1,5 +1,6 @@
 import SectionReveal from '../components/SectionReveal'
 import CountUp from '../components/CountUp'
+import Container from '../components/Container'
 
 const stats = [
   { end: 6, suffix: '', label: 'Products Built' },
@@ -14,7 +15,7 @@ export default function Stats() {
       className="relative z-10 py-20 md:py-32 border-t border-b border-border"
       style={{ background: 'rgba(0, 255, 135, 0.015)' }}
     >
-      <div className="mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-2 md:grid-cols-4 gap-8" style={{ maxWidth: '1200px' }}>
+      <Container className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, i) => (
           <SectionReveal key={stat.label} delay={i * 0.1} className="text-center">
             <p className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-accent-green">
@@ -25,7 +26,7 @@ export default function Stats() {
             </p>
           </SectionReveal>
         ))}
-      </div>
+      </Container>
     </section>
   )
 }

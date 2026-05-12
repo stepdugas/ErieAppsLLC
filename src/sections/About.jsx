@@ -1,4 +1,5 @@
 import SectionReveal from '../components/SectionReveal'
+import Container from '../components/Container'
 
 const infoRows = [
   { label: 'Location', value: 'Erie, Pennsylvania' },
@@ -27,8 +28,8 @@ const infoRows = [
 
 export default function About() {
   return (
-    <section id="about" className="relative z-10 py-20 md:py-32 px-6 sm:px-10 lg:px-16">
-      <div className="mx-auto" style={{ maxWidth: '1200px' }}>
+    <section id="about" className="relative z-10 py-20 md:py-32">
+      <Container>
         {/* Label + Headline */}
         <SectionReveal>
           <span className="font-mono text-xs text-accent-green uppercase tracking-widest">
@@ -93,7 +94,7 @@ export default function About() {
             </div>
           </SectionReveal>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

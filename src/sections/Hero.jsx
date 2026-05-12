@@ -3,9 +3,9 @@ import TypewriterText from '../components/TypewriterText'
 
 export default function Hero() {
   return (
-    <section className="grid-bg relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 lg:px-16 overflow-hidden">
+    <section className="grid-bg relative min-h-screen flex flex-col items-center justify-center overflow-hidden" style={{ padding: 'clamp(24px, 5vw, 64px)' }}>
       {/* Top right corner text */}
-      <span className="absolute top-20 right-6 sm:right-10 lg:right-16 font-mono text-[10px] text-text-muted uppercase tracking-widest hidden md:block">
+      <span className="absolute top-20 font-mono text-[10px] text-text-muted uppercase tracking-widest hidden md:block" style={{ right: 'clamp(24px, 5vw, 64px)' }}>
         EST. 2024 // ERIE PA
       </span>
 
@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       {/* Headline */}
-      <h1 className="font-headline text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-center leading-[1.15] max-w-4xl">
+      <h1 className="font-headline text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-center leading-[1.15]" style={{ maxWidth: '900px' }}>
         <span className="block">
           <AnimatedWord delay={0}>We</AnimatedWord>{' '}
           <AnimatedWord delay={0.08}>build</AnimatedWord>{' '}
@@ -48,7 +48,7 @@ export default function Hero() {
       </h1>
 
       {/* Subheadline */}
-      <p className="font-body text-sm sm:text-base md:text-lg text-text-secondary font-light text-center max-w-2xl mt-6 sm:mt-8 leading-relaxed">
+      <p className="font-body text-sm sm:text-base md:text-lg text-text-secondary font-light text-center leading-relaxed" style={{ maxWidth: '640px', marginTop: '2rem' }}>
         Erie Apps LLC is a one-person software studio based in Erie, Pennsylvania.
         AI-powered tools for the niches enterprise software ignores.
       </p>
