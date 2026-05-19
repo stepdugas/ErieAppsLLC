@@ -1,56 +1,27 @@
 import { products } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import SectionReveal from '../components/SectionReveal'
-import GlitchText from '../components/GlitchText'
 import Container from '../components/Container'
 
 export default function Products() {
-  const liveCount = products.filter((p) => p.status === 'Live').length
-
   return (
-    <section id="products" className="relative z-10 py-20 md:py-32">
+    <section id="products" className="relative py-20 md:py-28">
       <Container>
-        {/* Header row */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-16">
-          <div>
-            <SectionReveal>
-              <span className="font-mono text-xs text-accent-green uppercase tracking-widest">
-                01 // Products
-              </span>
-            </SectionReveal>
-            <SectionReveal delay={0.1}>
-              <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl mt-4">
-                {products.length} products.{' '}
-                <span className="text-ghost">
-                  <GlitchText text="All shipping." />
-                </span>
-              </h2>
-            </SectionReveal>
-          </div>
+        <SectionReveal>
+          <p className="font-mono text-[11px] text-text-muted uppercase tracking-widest mb-3">
+            Products
+          </p>
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-700 tracking-tight">
+            What we build
+          </h2>
+          <p className="text-text-secondary mt-4 max-w-xl text-lg">
+            Tools that solve real problems for real people — from AI-powered reports to habit tracking.
+          </p>
+        </SectionReveal>
 
-          {/* Stats block */}
-          <SectionReveal delay={0.2}>
-            <div className="font-mono text-[11px] text-text-muted uppercase tracking-widest space-y-1.5 md:text-right">
-              <p>
-                Total //{' '}
-                <span className="text-text-primary">
-                  {String(products.length).padStart(2, '0')}
-                </span>
-              </p>
-              <p>
-                Live //{' '}
-                <span className="text-text-primary">
-                  {String(liveCount).padStart(2, '0')}
-                </span>
-              </p>
-            </div>
-          </SectionReveal>
-        </div>
-
-        {/* Product grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
           {products.map((product, i) => (
-            <SectionReveal key={product.name} delay={i * 0.08}>
+            <SectionReveal key={product.name} delay={i * 0.06}>
               <ProductCard product={product} />
             </SectionReveal>
           ))}

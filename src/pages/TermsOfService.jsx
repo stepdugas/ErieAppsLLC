@@ -10,20 +10,19 @@ export default function TermsOfService() {
   return (
     <>
       <LegalNav />
-      <main className="relative z-10 pt-28 pb-20 px-6">
+      <main className="relative pt-28 pb-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <span className="font-mono text-xs text-accent-green uppercase tracking-widest">
+          <p className="font-mono text-[11px] text-text-muted uppercase tracking-widest">
             Legal
-          </span>
-          <h1 className="font-headline text-3xl md:text-5xl mt-4 mb-4">
+          </p>
+          <h1 className="font-sans text-3xl md:text-5xl font-700 tracking-tight mt-3 mb-4">
             Terms of Service
           </h1>
-          <p className="font-mono text-xs text-text-muted uppercase tracking-widest mb-12">
+          <p className="font-mono text-[11px] text-text-muted uppercase tracking-widest mb-12">
             Effective Date: January 1, 2025 — Last Updated: May 11, 2026
           </p>
 
-          <div className="space-y-10 font-body text-text-secondary font-light leading-relaxed">
-            {/* 1 */}
+          <div className="space-y-10 text-text-secondary leading-relaxed">
             <Section title="1. Agreement to Terms">
               <p>
                 These Terms of Service ("Terms") constitute a legally binding
@@ -41,7 +40,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 2 */}
             <Section title="2. Eligibility">
               <p>
                 You must be at least 13 years old to use our Services. If you are
@@ -52,7 +50,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 3 */}
             <Section title="3. Account Registration">
               <p>
                 Some Services require you to create an account. You agree to provide
@@ -62,9 +59,8 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 4 */}
             <Section title="4. Services Description">
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">InspectIQ</h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">InspectIQ</h4>
               <p>
                 An AI-powered report writing tool for home inspectors. InspectIQ
                 uses the Anthropic Claude API to assist in generating professional
@@ -74,7 +70,7 @@ export default function TermsOfService() {
                 to clients.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">ReplyIQ</h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">ReplyIQ</h4>
               <p>
                 An automated Google review response tool for businesses. ReplyIQ
                 connects to your Google Business Profile via the Google Business
@@ -83,7 +79,7 @@ export default function TermsOfService() {
                 full control over which responses are published.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">Dealership SaaS</h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">Dealership SaaS</h4>
               <p>
                 A website builder designed for independent car dealerships. Includes
                 inventory management, lead capture, and optional Google Business
@@ -92,7 +88,7 @@ export default function TermsOfService() {
                 dealership website.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">Stacked</h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">Stacked</h4>
               <p>
                 An iOS application that uses AI (Anthropic Claude API) to generate
                 flashcards from user-provided notes and study materials. Available
@@ -100,14 +96,14 @@ export default function TermsOfService() {
                 by Apple's terms.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">The Secret Place</h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">The Secret Place</h4>
               <p>
                 A Christian meditation iOS application offering guided meditation
                 sessions, scripture reflection, and spiritual growth tools. Available
                 via the Apple App Store.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">HabitLink</h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">HabitLink</h4>
               <p>
                 An iOS application available via the Apple App Store. In-app
                 purchases and subscriptions are governed additionally by Apple's
@@ -115,9 +111,8 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 5 */}
             <Section title="5. Payments and Subscriptions">
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">
                 5.1 Web-Based Services (InspectIQ, ReplyIQ, Dealership SaaS, HabitLink)
               </h4>
               <p>
@@ -127,7 +122,7 @@ export default function TermsOfService() {
                 annual basis depending on your selected plan.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">
                 5.2 iOS Apps (Stacked, The Secret Place, HabitLink)
               </h4>
               <p>
@@ -137,7 +132,7 @@ export default function TermsOfService() {
                 terms and conditions.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">
                 5.3 Cancellation and Refunds
               </h4>
               <p>
@@ -145,13 +140,13 @@ export default function TermsOfService() {
                 effect at the end of the current billing period. We do not offer
                 prorated refunds for partial billing periods. For web-based services,
                 refund requests may be submitted to{' '}
-                <a href="mailto:stephanie@erie-apps.com" className="text-accent-green hover:underline">
+                <a href="mailto:stephanie@erie-apps.com" className="text-text-primary underline hover:no-underline">
                   stephanie@erie-apps.com
                 </a>{' '}
                 within 14 days of purchase and will be reviewed on a case-by-case basis.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">
                 5.4 Price Changes
               </h4>
               <p>
@@ -161,7 +156,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 6 */}
             <Section title="6. User Content">
               <p>
                 "User Content" means any data, text, images, or materials you submit
@@ -176,11 +170,8 @@ export default function TermsOfService() {
               </ul>
             </Section>
 
-            {/* 7 */}
             <Section title="7. Third-Party Integrations">
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
-                7.1 Google Business Profile API
-              </h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">7.1 Google Business Profile API</h4>
               <p>
                 ReplyIQ and Dealership SaaS access your Google Business Profile with
                 your explicit OAuth 2.0 authorization. You may revoke access at any
@@ -189,9 +180,7 @@ export default function TermsOfService() {
                 requirements.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
-                7.2 Anthropic Claude API
-              </h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">7.2 Anthropic Claude API</h4>
               <p>
                 AI-generated content (reports, responses, flashcards) is provided as
                 a drafting aid and may contain errors. You are solely responsible for
@@ -199,19 +188,15 @@ export default function TermsOfService() {
                 Erie Apps LLC is not liable for inaccuracies in AI-generated content.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
-                7.3 Stripe
-              </h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">7.3 Stripe</h4>
               <p>
                 Payment processing is provided by Stripe and is subject to the{' '}
-                <a href="https://stripe.com/legal" target="_blank" rel="noopener noreferrer" className="text-accent-green hover:underline">
+                <a href="https://stripe.com/legal" target="_blank" rel="noopener noreferrer" className="text-text-primary underline hover:no-underline">
                   Stripe Services Agreement
                 </a>.
               </p>
 
-              <h4 className="font-headline text-sm text-text-primary mt-4 mb-2">
-                7.4 SendGrid
-              </h4>
+              <h4 className="font-sans text-sm font-600 text-text-primary mt-4 mb-2">7.4 SendGrid</h4>
               <p>
                 Email delivery is provided by SendGrid (Twilio). Transactional
                 emails including account notifications, receipts, and service updates
@@ -219,7 +204,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 8 */}
             <Section title="8. Prohibited Uses">
               <p>You agree not to:</p>
               <ul className="list-disc list-inside space-y-1.5 ml-2 mt-2">
@@ -234,7 +218,6 @@ export default function TermsOfService() {
               </ul>
             </Section>
 
-            {/* 9 */}
             <Section title="9. Intellectual Property">
               <p>
                 All intellectual property rights in our Services (including software,
@@ -248,38 +231,35 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 10 */}
             <Section title="10. Disclaimer of Warranties">
-              <p>
-                OUR SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT
-                WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY,
-                INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY,
-                FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+              <p className="uppercase text-xs tracking-wide">
+                Our Services are provided "as is" and "as available" without
+                warranties of any kind, whether express, implied, or statutory,
+                including but not limited to implied warranties of merchantability,
+                fitness for a particular purpose, and non-infringement.
               </p>
-              <p>
-                WE DO NOT WARRANT THAT AI-GENERATED CONTENT WILL BE ACCURATE,
-                COMPLETE, OR ERROR-FREE. YOU ARE SOLELY RESPONSIBLE FOR REVIEWING
-                AND VERIFYING ALL AI-GENERATED OUTPUT.
+              <p className="uppercase text-xs tracking-wide">
+                We do not warrant that AI-generated content will be accurate,
+                complete, or error-free. You are solely responsible for reviewing
+                and verifying all AI-generated output.
               </p>
             </Section>
 
-            {/* 11 */}
             <Section title="11. Limitation of Liability">
-              <p>
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, ERIE APPS LLC SHALL NOT BE
-                LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
-                PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA,
-                USE, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF OUR
-                SERVICES.
+              <p className="uppercase text-xs tracking-wide">
+                To the maximum extent permitted by law, Erie Apps LLC shall not be
+                liable for any indirect, incidental, special, consequential, or
+                punitive damages, including but not limited to loss of profits, data,
+                use, or goodwill, arising out of or related to your use of our
+                Services.
               </p>
-              <p>
-                OUR TOTAL AGGREGATE LIABILITY FOR ANY CLAIMS ARISING FROM YOUR USE
-                OF THE SERVICES SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE
-                TWELVE (12) MONTHS PRECEDING THE CLAIM.
+              <p className="uppercase text-xs tracking-wide">
+                Our total aggregate liability for any claims arising from your use
+                of the Services shall not exceed the amount you paid us in the
+                twelve (12) months preceding the claim.
               </p>
             </Section>
 
-            {/* 12 */}
             <Section title="12. Indemnification">
               <p>
                 You agree to indemnify, defend, and hold harmless Erie Apps LLC, its
@@ -289,7 +269,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 13 */}
             <Section title="13. Termination">
               <p>
                 We may suspend or terminate your access to any Service at any time,
@@ -299,7 +278,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 14 */}
             <Section title="14. Governing Law and Disputes">
               <p>
                 These Terms shall be governed by and construed in accordance with the
@@ -310,7 +288,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 15 */}
             <Section title="15. Modifications to Terms">
               <p>
                 We reserve the right to modify these Terms at any time. Material
@@ -321,7 +298,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 16 */}
             <Section title="16. Severability">
               <p>
                 If any provision of these Terms is found to be unenforceable or
@@ -331,7 +307,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 17 */}
             <Section title="17. Entire Agreement">
               <p>
                 These Terms, together with our Privacy Policy, constitute the entire
@@ -340,7 +315,6 @@ export default function TermsOfService() {
               </p>
             </Section>
 
-            {/* 18 */}
             <Section title="18. Contact Us">
               <p>
                 If you have questions about these Terms of Service, please contact us:
@@ -350,13 +324,13 @@ export default function TermsOfService() {
                 <p>Erie, Pennsylvania</p>
                 <p>
                   Email:{' '}
-                  <a href="mailto:stephanie@erie-apps.com" className="text-accent-green hover:underline">
+                  <a href="mailto:stephanie@erie-apps.com" className="text-text-primary underline hover:no-underline">
                     stephanie@erie-apps.com
                   </a>
                 </p>
                 <p>
                   Website:{' '}
-                  <a href="https://erie-apps.com" className="text-accent-green hover:underline">
+                  <a href="https://erie-apps.com" className="text-text-primary underline hover:no-underline">
                     erie-apps.com
                   </a>
                 </p>
@@ -373,7 +347,7 @@ export default function TermsOfService() {
 function Section({ title, children }) {
   return (
     <div>
-      <h3 className="font-headline text-lg text-text-primary mb-3">{title}</h3>
+      <h3 className="font-sans text-lg font-600 text-text-primary mb-3">{title}</h3>
       <div className="space-y-3">{children}</div>
     </div>
   )

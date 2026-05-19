@@ -5,7 +5,8 @@ export const products = [
     url: 'useinspectiq.com',
     color: '#00ff87',
     status: 'Live',
-    iconKey: 'inspectiq',
+    logo: '/logo-inspectiq.svg',
+    logoType: 'svg',
     type: 'SaaS',
   },
   {
@@ -14,7 +15,8 @@ export const products = [
     url: 'replyiqapp.com',
     color: '#60efff',
     status: 'Live',
-    iconKey: 'replyiq',
+    logo: '/logo-replyiq.svg',
+    logoType: 'svg',
     type: 'SaaS',
   },
   {
@@ -23,7 +25,8 @@ export const products = [
     url: 'cardealershipswebsitebuilder.com',
     color: '#ff4d6d',
     status: 'Live',
-    iconKey: 'dealership',
+    logo: '/logo-dealership.svg',
+    logoType: 'svg',
     type: 'SaaS',
   },
   {
@@ -32,7 +35,8 @@ export const products = [
     url: 'stackedflashcards.com',
     color: '#ff9a3c',
     status: 'Live',
-    iconKey: 'stacked',
+    logo: '/logo-stacked.png',
+    logoType: 'png',
     type: 'iOS',
   },
   {
@@ -41,8 +45,9 @@ export const products = [
     url: 'thesecretplace.app',
     color: '#c77dff',
     status: 'Live',
-    iconKey: 'secretplace',
-    type: 'iOS',
+    logo: '/logo-secretplace.png',
+    logoType: 'png',
+    type: 'iOS & Android',
   },
   {
     name: 'HabitLink',
@@ -50,7 +55,8 @@ export const products = [
     url: 'apps.apple.com',
     color: '#00ff87',
     status: 'Live',
-    iconKey: 'habitlink',
+    logo: '/logo-habitlink.png',
+    logoType: 'png',
     type: 'iOS',
   },
 ]

@@ -3,37 +3,32 @@ import TypewriterText from '../components/TypewriterText'
 
 export default function Hero() {
   return (
-    <section className="grid-bg relative min-h-screen flex flex-col items-center justify-center overflow-hidden" style={{ padding: 'clamp(24px, 5vw, 64px)' }}>
-      {/* Top right corner text */}
-      <span className="absolute top-20 font-mono text-[10px] text-text-muted uppercase tracking-widest hidden md:block" style={{ right: 'clamp(24px, 5vw, 64px)' }}>
-        EST. 2024 // ERIE PA
-      </span>
-
+    <section className="relative min-h-[90vh] flex flex-col items-center justify-center" style={{ padding: 'clamp(24px, 5vw, 64px)' }}>
       {/* Badge */}
-      <div className="flex items-center gap-2 mb-6 sm:mb-8">
-        <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse shrink-0" aria-hidden="true" />
-        <span className="font-mono text-[10px] sm:text-[11px] text-text-secondary uppercase tracking-widest text-center">
-          Solo Founded // AI-Powered // Bootstrapped
+      <div className="flex items-center gap-3 mb-8">
+        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" aria-hidden="true" />
+        <span className="font-mono text-[11px] text-text-muted uppercase tracking-widest">
+          Erie, PA — Est. 2026
         </span>
       </div>
 
       {/* Headline */}
-      <h1 className="font-headline text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-center leading-[1.15]" style={{ maxWidth: '900px' }}>
+      <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-700 text-center leading-[1.1] tracking-tight" style={{ maxWidth: '800px' }}>
         <span className="block">
-          <AnimatedWord delay={0}>AI-powered</AnimatedWord>{' '}
-          <AnimatedWord delay={0.1}>tools</AnimatedWord>{' '}
-          <AnimatedWord delay={0.18}>for</AnimatedWord>
+          <AnimatedWord delay={0}>Software</AnimatedWord>{' '}
+          <AnimatedWord delay={0.08}>for</AnimatedWord>{' '}
+          <AnimatedWord delay={0.14}>the</AnimatedWord>
         </span>
-        <span className="block mt-2 text-ghost">
-          <AnimatedWord delay={0.26}>the</AnimatedWord>{' '}
-          <AnimatedWord delay={0.32}>niches</AnimatedWord>{' '}
-          <AnimatedWord delay={0.38}>enterprise</AnimatedWord>
+        <span className="block mt-1">
+          <AnimatedWord delay={0.2}>industries</AnimatedWord>{' '}
+          <AnimatedWord delay={0.26}>others</AnimatedWord>{' '}
+          <AnimatedWord delay={0.32}>overlook.</AnimatedWord>
         </span>
-        <span className="block mt-2 text-ghost">
-          <AnimatedWord delay={0.44}>software</AnimatedWord>{' '}
-          <AnimatedWord delay={0.5}>ignores.</AnimatedWord>
-        </span>
-        <span className="block mt-4 text-accent-green text-2xl sm:text-3xl md:text-5xl lg:text-6xl">
+      </h1>
+
+      {/* Rotating text */}
+      <div className="mt-6 h-10 flex items-center">
+        <span className="font-sans text-xl sm:text-2xl md:text-3xl font-500 text-text-secondary">
           <TypewriterText
             strings={[
               'Home inspectors.',
@@ -46,36 +41,28 @@ export default function Hero() {
             pauseDuration={2200}
           />
         </span>
-      </h1>
+      </div>
 
       {/* Subheadline */}
-      <p className="font-body text-sm sm:text-base md:text-lg text-text-secondary font-light text-center leading-relaxed" style={{ maxWidth: '600px', marginTop: '2rem' }}>
+      <p className="text-base sm:text-lg text-text-secondary text-center leading-relaxed mt-6" style={{ maxWidth: '520px' }}>
         Six products. One founder. All shipping.
-        Erie Apps LLC builds focused software from Erie, Pennsylvania.
+        Erie Apps builds focused, AI-powered tools from Erie, Pennsylvania.
       </p>
 
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 sm:mt-10 w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row items-center gap-3 mt-10 w-full sm:w-auto">
         <a
           href="#products"
-          className="w-full sm:w-auto text-center font-mono text-xs uppercase tracking-widest px-10 py-4 bg-accent-green text-bg rounded-xl transition-all duration-200 hover:shadow-[4px_4px_0_#00ff87] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+          className="w-full sm:w-auto text-center text-sm font-500 px-8 py-3.5 bg-accent text-white rounded-full transition-all duration-200 hover:bg-accent-hover hover:shadow-lg"
         >
-          Explore Products →
+          View Products
         </a>
         <a
           href="#about"
-          className="w-full sm:w-auto text-center font-mono text-xs uppercase tracking-widest px-10 py-4 rounded-xl border border-border text-text-secondary transition-all duration-200 hover:border-border-hover hover:text-accent-green"
+          className="w-full sm:w-auto text-center text-sm font-500 px-8 py-3.5 rounded-full border border-border text-text-secondary transition-all duration-200 hover:border-text-muted hover:text-text-primary"
         >
-          The Story
+          Our Story
         </a>
-      </div>
-
-      {/* Scroll indicator — hidden on short screens */}
-      <div className="absolute bottom-8 sm:bottom-10 flex-col items-center gap-3 hidden min-[700px]:flex">
-        <div className="w-[1px] h-8 bg-text-muted" aria-hidden="true" />
-        <span className="font-mono text-[10px] text-text-muted uppercase tracking-[0.3em]">
-          Scroll
-        </span>
       </div>
     </section>
   )

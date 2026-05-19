@@ -6,7 +6,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60)
+    const handleScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -23,11 +23,11 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        backgroundColor: scrolled || menuOpen ? 'rgba(8,8,8,0.92)' : 'transparent',
-        backdropFilter: scrolled || menuOpen ? 'blur(24px)' : 'none',
+        backgroundColor: scrolled || menuOpen ? 'rgba(250, 250, 249, 0.92)' : 'transparent',
+        backdropFilter: scrolled || menuOpen ? 'blur(20px)' : 'none',
         borderBottom:
           scrolled || menuOpen
-            ? '1px solid rgba(255,255,255,0.06)'
+            ? '1px solid var(--color-border)'
             : '1px solid transparent',
       }}
     >
@@ -41,26 +41,27 @@ export default function Navbar() {
           paddingRight: 'clamp(24px, 5vw, 64px)',
         }}
       >
-        <Link to="/" className="flex items-center gap-0 font-headline text-xl select-none">
-          <span className="text-accent-green">erie</span>
-          <span className="text-accent-green">apps</span>
-          <span className="ml-1 w-2 h-2 rounded-full bg-accent-green animate-pulse" aria-hidden="true" />
+        <Link to="/" className="font-sans text-lg font-600 text-text-primary select-none">
+          Erie Apps
         </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {['Products', 'About', 'Contact'].map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              className="font-mono text-xs uppercase tracking-widest text-text-secondary transition-colors duration-200 hover:text-accent-green"
-            >
-              {link}
-            </a>
-          ))}
+          <a
+            href="#products"
+            className="text-sm text-text-secondary transition-colors duration-200 hover:text-text-primary"
+          >
+            Products
+          </a>
+          <Link
+            to="/support"
+            className="text-sm text-text-secondary transition-colors duration-200 hover:text-text-primary"
+          >
+            Support
+          </Link>
         </div>
 
-        {/* Mobile hamburger — 44x44 touch target */}
+        {/* Mobile hamburger */}
         <button
           className="md:hidden flex flex-col items-center justify-center gap-1.5"
           style={{ minWidth: '44px', minHeight: '44px' }}
@@ -69,17 +70,17 @@ export default function Navbar() {
           aria-expanded={menuOpen}
         >
           <span
-            className="block w-5 h-[1.5px] bg-accent-green transition-all duration-200"
+            className="block w-5 h-[1.5px] bg-text-primary transition-all duration-200"
             style={{
               transform: menuOpen ? 'rotate(45deg) translateY(4.5px)' : 'none',
             }}
           />
           <span
-            className="block w-5 h-[1.5px] bg-accent-green transition-all duration-200"
+            className="block w-5 h-[1.5px] bg-text-primary transition-all duration-200"
             style={{ opacity: menuOpen ? 0 : 1 }}
           />
           <span
-            className="block w-5 h-[1.5px] bg-accent-green transition-all duration-200"
+            className="block w-5 h-[1.5px] bg-text-primary transition-all duration-200"
             style={{
               transform: menuOpen ? 'rotate(-45deg) translateY(-4.5px)' : 'none',
             }}
@@ -90,20 +91,23 @@ export default function Navbar() {
       {/* Mobile menu dropdown */}
       {menuOpen && (
         <div
-          className="md:hidden border-t border-border flex flex-col gap-5"
-          style={{ padding: 'clamp(24px, 5vw, 64px)' }}
+          className="md:hidden border-t border-border flex flex-col gap-1 bg-bg"
+          style={{ padding: 'clamp(16px, 5vw, 32px)' }}
         >
-          {['Products', 'About', 'Contact'].map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              onClick={() => setMenuOpen(false)}
-              className="font-mono text-sm uppercase tracking-widest text-text-secondary transition-colors duration-200 hover:text-accent-green"
-              style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
-            >
-              {link}
-            </a>
-          ))}
+          <a
+            href="#products"
+            onClick={() => setMenuOpen(false)}
+            className="text-sm text-text-secondary transition-colors duration-200 hover:text-text-primary py-3"
+          >
+            Products
+          </a>
+          <Link
+            to="/support"
+            onClick={() => setMenuOpen(false)}
+            className="text-sm text-text-secondary transition-colors duration-200 hover:text-text-primary py-3"
+          >
+            Support
+          </Link>
         </div>
       )}
     </nav>

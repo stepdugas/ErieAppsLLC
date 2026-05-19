@@ -12,17 +12,16 @@ const stats = [
 export default function Stats() {
   return (
     <section
-      className="relative z-10 py-20 md:py-32 border-t border-b border-border"
-      style={{ background: 'rgba(0, 255, 135, 0.015)' }}
+      className="relative py-20 md:py-28 bg-surface-alt"
       aria-label="Company statistics"
     >
-      <Container className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <Container className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, i) => (
-          <SectionReveal key={stat.label} delay={i * 0.1} className="text-center">
-            <p className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-accent-green">
+          <SectionReveal key={stat.label} delay={i * 0.08} className="text-center">
+            <p className="font-sans text-4xl sm:text-5xl md:text-6xl font-700 tracking-tight text-text-primary">
               <CountUp end={stat.end} duration={2} suffix={stat.suffix} />
             </p>
-            <p className="font-mono text-[10px] sm:text-[11px] text-text-muted uppercase tracking-widest mt-2 sm:mt-3">
+            <p className="font-mono text-[10px] sm:text-[11px] text-text-muted uppercase tracking-widest mt-2">
               {stat.label}
             </p>
           </SectionReveal>
