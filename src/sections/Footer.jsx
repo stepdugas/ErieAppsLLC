@@ -3,7 +3,7 @@ import Container from '../components/Container'
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border py-10 mt-24">
+    <footer className="relative border-t border-border py-10 mt-40">
       <Container className="flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
           <span className="font-sans text-sm font-600 text-text-primary">
