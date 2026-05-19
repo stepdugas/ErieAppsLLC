@@ -3,7 +3,7 @@ import TypewriterText from '../components/TypewriterText'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col items-center justify-center" style={{ padding: 'clamp(24px, 5vw, 64px)' }}>
+    <section className="relative min-h-[60vh] flex flex-col items-center justify-center" style={{ padding: 'clamp(24px, 5vw, 64px)' }}>
       {/* Badge */}
       <div className="flex items-center gap-3 mb-8">
         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" aria-hidden="true" />
@@ -49,19 +49,13 @@ export default function Hero() {
         Erie Apps builds focused, AI-powered tools from Erie, Pennsylvania.
       </p>
 
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row items-center gap-3 mt-10 w-full sm:w-auto">
+      {/* Button */}
+      <div className="mt-10">
         <a
           href="#products"
-          className="w-full sm:w-auto text-center text-sm font-500 px-8 py-3.5 bg-accent text-white rounded-full transition-all duration-200 hover:bg-accent-hover hover:shadow-lg"
+          className="text-sm font-500 px-8 py-3.5 bg-accent text-white rounded-full transition-all duration-200 hover:bg-accent-hover hover:shadow-lg"
         >
           View Products
-        </a>
-        <a
-          href="#about"
-          className="w-full sm:w-auto text-center text-sm font-500 px-8 py-3.5 rounded-full border border-border text-text-secondary transition-all duration-200 hover:border-text-muted hover:text-text-primary"
-        >
-          Our Story
         </a>
       </div>
     </section>

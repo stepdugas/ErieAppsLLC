@@ -5,7 +5,7 @@ import Container from '../components/Container'
 
 export default function Products() {
   return (
-    <section id="products" className="relative py-20 md:py-28">
+    <section id="products" className="relative py-12 md:py-16">
       <Container>
         <SectionReveal>
           <p className="font-mono text-[11px] text-text-muted uppercase tracking-widest mb-3">

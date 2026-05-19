@@ -12,7 +12,7 @@ export const products = [
   {
     name: 'ReplyIQ',
     description: 'Automated Google review responses for local businesses. Never leave a review unanswered again.',
-    url: 'replyiqapp.com',
+    url: 'www.replyiqapp.com',
     color: '#60efff',
     status: 'Live',
     logo: '/logo-replyiq.svg',
@@ -42,7 +42,7 @@ export const products = [
   {
     name: 'The Secret Place',
     description: 'A Christian meditation app for daily stillness, scripture reflection, and spiritual growth.',
-    url: 'thesecretplace.app',
+    url: 'thesecretplaceapp.com',
     color: '#c77dff',
     status: 'Live',
     logo: '/logo-secretplace.png',
@@ -52,7 +52,7 @@ export const products = [
   {
     name: 'HabitLink',
     description: 'Minimalist habit tracker for iOS. Build streaks, track progress, and stay consistent.',
-    url: 'apps.apple.com',
+    url: 'usehabitlink.com',
     color: '#00ff87',
     status: 'Live',
     logo: '/logo-habitlink.png',
